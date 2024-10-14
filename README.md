@@ -13,6 +13,15 @@ Sample inverted index mappings:
 Sample search result from API:
 
 ```
+// Input
+{
+    "tableName": "document-indexer-index-mapping",
+    "bucketName": "document-indexer-service-test-documents"
+}
+```
+
+```
+// Output
 {
     "ok": true,
     "response": {
