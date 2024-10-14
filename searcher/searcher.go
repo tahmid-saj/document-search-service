@@ -3,6 +3,7 @@ package searcher
 import (
 	"document-search-service/dynamodb"
 	"document-search-service/object"
+	"log"
 	"strings"
 )
 
@@ -22,6 +23,7 @@ func SearchDocuments(searchQuery, tableName, bucketName string) (
 		// retrieve searchQuery's term from dynamodb if it exists
 		searchQueryTermInvertedIndex, err := dynamodb.ReadItem(searchQueryTerm, tableName)
 		if err != nil {
+			log.Print(err)
 			return nil, nil, err
 		}
 
@@ -31,9 +33,9 @@ func SearchDocuments(searchQuery, tableName, bucketName string) (
 			if _, exists := documents[DocumentTitle(documentID)]; !exists {
 				document, err := retrieveDocument(bucketName, documentID)
 				if err != nil {
+					log.Print(err)
 					return nil, nil, err
 				}
-
 				
 				documents[DocumentTitle(document.Title)] = DocumentContent(document.Content)
 			}
@@ -55,6 +57,7 @@ func retrieveDocument(bucketName, documentID string) (document *object.Document,
 
 	document, err = object.ReadObject(s3Client, bucketName, documentID)
 	if err != nil {
+		log.Print(err)
 		return nil, err
 	}
 
