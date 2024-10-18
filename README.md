@@ -9,7 +9,35 @@ Document searcher service to search for documents using search query terms. Uses
 
 The directory structure is as follows:
 
+### `/bucket`
+Contains logic for interacting with Amazon S3 to store and retrieve documents.
 
+### `/conf`
+Holds configuration files and settings for the service.
+
+### `/data`
+Stores sample data or datasets used for indexing and search.
+
+### `/dynamodb`
+Manages interactions with DynamoDB, including table operations.
+
+### `/models`
+Defines data models used within the service.
+
+### `/object`
+Contains utilities for managing document objects in storage.
+
+### `/routes`
+Defines API routes for the service.
+
+### `/searcher`
+Handles the core search logic using an inverted index.
+
+### `/utils`
+Utility functions used across the project.
+
+### `/main.go`
+Main entry point for the application.
 
 <br/>
 <br/>
