@@ -4,13 +4,37 @@ Document searcher service to search for documents using search query terms. Uses
 
 <br/>
 <br/>
-Sample inverted index mappings:
+
+## Directory structure
+
+The directory structure is as follows:
+
+
+
+<br/>
+<br/>
+
+## Overview
+
+### Design
+
+The high level workflow of the document searcher can be found below. Similar services can be found <a href="https://whimsical.com/web-microservices-6uqvwWZtcBFsNJB2hepGy1">here</a> and below:
+
+#### Document searcher workflow
+
+<img width="518" alt="image" src="https://github.com/user-attachments/assets/daa66cc1-a116-4097-8624-905bc4dc9590">
+
+#### Similar services
+
+<img width="834" alt="image" src="https://github.com/user-attachments/assets/b54088e7-870c-46dd-9cf6-2e5ec27d9d5c">
+
+### Examples
+
+#### Sample inverted index mappings
 
 <img width="1334" alt="image" src="https://github.com/user-attachments/assets/a6c5e3f1-7296-4913-9dba-d8e1daee2d45">
 
-<br/>
-<br/>
-Sample search result from API:
+#### Sample search result from API
 
 ```
 // Input
